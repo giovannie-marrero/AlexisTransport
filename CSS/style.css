@@ -106,7 +106,7 @@ nav ul li a:hover {
 
 .section {
   width: 100%;
-  min-height: 80vh;
+  min-height: 550px;
   background-color: #000000;
 }
 
@@ -192,6 +192,57 @@ nav ul li a:hover {
   border-radius: 25px;
 }
 
+/* Gallery Section */
+
+#gallery{
+  background-color: #000000;
+  padding-bottom: 60px;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.gallery-container .title {
+  text-transform: uppercase;
+  font-size: 28px;
+  margin: 50px;
+}
+
+.gallery-container .title h1{
+  color: #fff;
+}
+
+
+.gallery-container .box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.gallery-container .box .column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 32.5%;
+  gap: 3vw;
+}
+
+.gallery-container .box .column img{
+  width: 80%;
+  padding-bottom:  15px;
+  border-radius: 45px;
+  transition: transform 0.5s;
+}
+
+.gallery-container .box .column img:hover{
+  transform: scale(1.03);
+}
+
 /* Our Services Section */
 
 .container .title {
@@ -243,7 +294,7 @@ nav ul li a:hover {
   transform: translateY(-10px);
 }
 
-/* team */
+/* Team Section */
 
 .team-section {
   background-color: #000000;
@@ -394,10 +445,7 @@ form .btn2 {
 }
 
 
-@media screen and (max-width: 768px) {
-  .section {
-    min-height: 110vh;
-  }
+@media screen and (max-width: 838px) {
 
   .content h1 {
     font-size: 80px;
@@ -411,7 +459,10 @@ form .btn2 {
     width: 80%;
     display: block;
     margin: auto;
-    padding-top: 50px;
+  }
+
+  #about .container{
+    padding-bottom: 30px;
   }
 
   .content-section {
@@ -421,7 +472,7 @@ form .btn2 {
     margin: auto;
   }
 
-  .content-section .title {
+  .content-section .title, #gallery .title, #services .title, #team .title, #contact .title {
     text-align: center;
     font-size: 19px;
   }
@@ -437,6 +488,7 @@ form .btn2 {
 
   .content-section .social {
     text-align: center;
+    padding-bottom: 20px;
   }
 
   .image-section {
@@ -471,6 +523,41 @@ form .btn2 {
 
   .profile h5 {
     padding-bottom: 10px;
+  }
+
+  .gallery-container .box{
+    flex-direction: column;
+  }
+
+  .gallery-container .box .column{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery-container .box .column img{
+    width: 70%;
+    height: auto;
+  }
+
+  .contact-left{
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1020px) and (min-width: 838px) and (orientation: landscape) {
+  .contact-left{
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1020px) and (orientation: landscape) {
+  .contact-left{
+    display: flex;
+    align-items: center;
   }
 }
 
